@@ -1,0 +1,14 @@
+# pytest configuration for the karen test suite.
+#
+# Driven by `bash tests.sh` (which builds cache/venv and sets PYTHONPATH); this config also
+# makes a bare `pytest` work from inside an activated venv. pythonpath below adds karen's
+# single import root (libraries/) so the flat modules (checks, git_io, message, ...) resolve
+# without any wrapper. Discovery is scoped to tests/. The suite is pure/offline -- it injects
+# a fake API transport and only ever drives throwaway git repos under tmp_path.
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+pythonpath = ["libraries"]
+addopts = "-ra -q --strict-markers --import-mode=importlib -p no:cacheprovider"

@@ -1,0 +1,11 @@
+# Build + test requirements for karen (installed into cache/venv by compile.sh / tests.sh).
+# karen's runtime has ZERO third-party deps: the binary talks to the Anthropic API with the
+# Python standard library alone (urllib/json). These are purely the BUILD toolchain (Nuitka
+# + patchelf for --onefile) and the TEST toolchain (pytest). Pins mirror qvm's known-good set.
+nuitka==4.2.2
+patchelf==0.19.1.0
+pytest==9.1.1
+iniconfig==2.3.0
+packaging==26.2
+pluggy==1.6.0
+Pygments==2.20.0

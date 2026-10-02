@@ -1,0 +1,7 @@
+# Test-only requirements for the karen suite (installed into cache/venv by tests.sh).
+# The suite is pure/offline: no runtime third-party deps, so pytest is all it needs.
+pytest==9.1.1
+iniconfig==2.3.0
+packaging==26.2
+pluggy==1.6.0
+Pygments==2.20.0
