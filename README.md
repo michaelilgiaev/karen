@@ -15,10 +15,10 @@ export ANTHROPIC_API="<YOUR_API_KEY_GOES_HERE>"
 ```
 
 Git clone and change into the repository directory:
-'''
+```
 git clone https://github.com/michaelilgiaev/karen.git && \
 cd karen
-'''
+```
 
 Install:
 ```
