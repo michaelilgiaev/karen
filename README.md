@@ -14,7 +14,7 @@ Export Anthropic API key to `~/.bashrc`:
 export ANTHROPIC_API="<YOUR_API_KEY_GOES_HERE>"
 ```
 
-Git clone and change into the repository directory:
+Clone the repository and change into its directory.:
 ```
 git clone https://github.com/michaelilgiaev/karen.git && \
 cd karen
