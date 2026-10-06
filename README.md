@@ -10,15 +10,20 @@ Documentation only covers Arch-based systems.
 
 Export Anthropic API key to `~/.bashrc`:
 
-```bash
-export ANTHROPIC_API="API_GOES_HERE"
+```
+export ANTHROPIC_API="<YOUR_API_KEY_GOES_HERE>"
 ```
 
-Then install:
+Git clone and change into the repository directory:
+'''
+git clone https://github.com/michaelilgiaev/karen.git && \
+cd karen
+'''
 
+Install:
 ```
-sudo pacman --sync --refresh --needed --noconfirm - < packages_x86_64 \
-    && bash compile.sh \
-    && sudo install -m 755 output/karen /usr/bin/ \
-    && sudo install -m 644 libraries/completion.bash /usr/share/bash-completion/completions/karen
+sudo pacman --sync --refresh --needed --noconfirm - < packages_x86_64 && \
+bash compile.sh && \ 
+sudo install -m 755 output/karen /usr/bin/ && \ 
+sudo install -m 644 libraries/completion.bash /usr/share/bash-completion/completions/karen
 ```
